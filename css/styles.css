@@ -27,6 +27,10 @@ body {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .cards {
   display: flex;
 }

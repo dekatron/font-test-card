@@ -22,7 +22,9 @@ const serifFonts = [
 
 const testText = 'The quick onyx goblin jumps over the lazy dwarf';
 
-let fonts = sansSerifFonts.join(':400,700|') + serifFonts.join(':400,700|');
+const fontsToInclude = ':400,400i,700,700i|';
+
+let fonts = sansSerifFonts.join(fontsToInclude) + serifFonts.join(fontsToInclude);
 fonts = fonts.replace(' ', '+');
 
 $(document).ready(function() {
@@ -44,9 +46,13 @@ $(document).ready(function() {
       <div class="${className}">
         <h2>${item}</h2>
         <p>${testText}</p>
+        <p class="italic">${testText}</p>
         <p class="bold">${testText}</p>
+        <p class="bold italic">${testText}</p>
         <p class="caps">${testText}</p>
-        <p class="bold caps">${testText}</p>
+        <p class="caps italic">${testText}</p>
+        <p class="caps bold">${testText}</p>
+        <p class="caps bold italic">${testText}</p>
       </div>
     `);
   });
@@ -60,9 +66,13 @@ $(document).ready(function() {
       <div class="${className}">
         <h2>${item}</h2>
         <p>${testText}</p>
+        <p class="italic">${testText}</p>
         <p class="bold">${testText}</p>
+        <p class="bold italic">${testText}</p>
         <p class="caps">${testText}</p>
-        <p class="bold caps">${testText}</p>
+        <p class="caps italic">${testText}</p>
+        <p class="caps bold">${testText}</p>
+        <p class="caps bold italic">${testText}</p>
       </div>
     `);
   });
